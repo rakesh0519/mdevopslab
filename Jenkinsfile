@@ -5,7 +5,7 @@ pipeline {
         // Define environment variables with paths relative to Jenkins home
         HOME_DIR = '/var/lib/jenkins'
         WORKSPACE_DIR = "${HOME_DIR}/workspace/myproject"
-        DEPLOY_DIR = "${HOME_DIR}/deployments"
+        DEPLOY_DIR = "{HOME_DIR}/deployments"
     }
 
     stages {
