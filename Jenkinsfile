@@ -4,32 +4,40 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project...'
-                // Insert build commands here, e.g., compiling code
+                // Replace with actual build commands
+                sh 'echo Building the project...'
+                // For example, a Java build command might be:
+                // sh './gradlew build'
             }
         }
-        
+
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                // Insert test commands here, e.g., running unit tests
+                // Replace with actual test commands
+                sh 'echo Running tests...'
+                // For example, to run tests:
+                // sh './gradlew test'
             }
         }
-        
+
         stage('Deploy') {
             steps {
-                echo 'Deploying the project...'
-                // Insert deploy commands here, e.g., deploying to a server
+                // Replace with actual deployment commands
+                sh 'echo Deploying the project...'
+                // For example, to deploy:
+                // sh './deploy_script.sh'
             }
         }
     }
-    
+
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            // Message on success
+            sh 'echo Pipeline completed successfully!'
         }
         failure {
-            echo 'Pipeline failed.'
+            // Message on failure
+            sh 'echo Pipeline failed.'
         }
     }
 }
