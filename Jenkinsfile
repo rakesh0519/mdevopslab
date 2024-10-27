@@ -38,7 +38,7 @@ pipeline {
     post {
         success {
             sh 'echo Pipeline completed successfully!'
-        }
+        },
         failure {
             sh 'echo Pipeline failed.'
         }
